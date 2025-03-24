@@ -1,9 +1,10 @@
+import controller.GameController;
 import models.Board;
+import models.Game;
 
 public class Main {
     public static void main(String[] args) {
 
-    Board board = new Board(3);
-    board.displayBoard();
+    Game game = GameController.initialseGame();
     }
 }
