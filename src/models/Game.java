@@ -1,7 +1,13 @@
 package models;
 
-import java.util.List;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.NoArgsConstructor;
 
+import java.util.List;
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Game {
     public Board board;
     public List<Player> playerList;

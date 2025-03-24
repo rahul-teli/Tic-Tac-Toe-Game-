@@ -12,6 +12,8 @@ public class Cell {
     }
 
     public void updateCell(Player player){
+        this.cellstate = CellState.OCCUPIED;
+        this.player = player;
 
     }
 }

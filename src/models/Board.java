@@ -19,4 +19,18 @@ public class Board {
             cells.add(row);
         }
     }
+
+    public void displayBoard() {
+        for (int i=0; i<N; i++){
+            for(int j =0; j<N; j++){
+                Cell cell = cells.get(i).get(j);
+                if (cell.cellstate == CellState.OCCUPIED){
+                    System.out.printf("| %c ", cell.player.symbol);
+                } else{
+                    System.out.printf("|  ");
+                }
+            }
+            System.out.printf("|\n");
+        }
+    }
 }
