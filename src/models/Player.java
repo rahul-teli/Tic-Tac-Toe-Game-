@@ -1,5 +1,8 @@
 package models;
 
+import lombok.Getter;
+
+@Getter
 public abstract class Player {
     String name;
     Character symbol;
@@ -10,6 +13,6 @@ public abstract class Player {
         this.symbol = symbol;
         this.id = id;
     }
-    abstract void makeMove();
+    public abstract Cell makeMove();
 
 }

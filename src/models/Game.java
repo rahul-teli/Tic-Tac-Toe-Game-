@@ -1,6 +1,7 @@
 package models;
-
 import lombok.*;
+import strategy.RowWinningStrategy;
+import strategy.WinningStrategy;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,6 +16,7 @@ public class Game {
     int currentPlayerIndex;
     List<Cell> moves;
     GameState gameState;
+    List<WinningStrategy> winningStrategies;
 
     public Game(int n, List<Player> playerList){
         this.board = new Board(n);
@@ -22,5 +24,6 @@ public class Game {
         this.currentPlayerIndex =0;
         this.moves = new ArrayList<>();
         this.gameState = GameState.INIT;
+        this.winningStrategies = new ArrayList<>(List.of(new RowWinningStrategy()));
     }
 }

@@ -9,7 +9,7 @@ public class BotPlayer extends Player{
     }
 
     @Override
-    void makeMove() {
-
+    public Cell makeMove() {
+        return null;
     }
 }

@@ -33,4 +33,14 @@ public class Board {
             System.out.printf("|\n");
         }
     }
+    public void updateBoard (Cell cell, Player player){
+        int row = cell.row;
+        int col = cell.col;
+
+        if (row < N && col < N && row >= 0 && col >= 0 && this.cells.get(row).get(col).cellstate == CellState.FREE){
+            this.cells.get(row).get(col).updateCell(player);
+        } else {
+            throw new IllegalArgumentException("The move is invalid");
+        }
+    }
 }
